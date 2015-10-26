@@ -7,7 +7,7 @@ for i in xrange(int(f.readline())):
 			road[a[j]].append(a[1-j])
 		else:
 			road[a[j]]=[a[1-j]]
-print(road)
+#print(road)
 
 zz=(f.readline().strip().split(' '))
 Started,Goal=zz[0],zz[1]
@@ -26,5 +26,8 @@ for i in Passed:
 			if need == Started:
 				break
 		break
-Drive_Road.reverse()
-print(Drive_Road)
+try:
+	Drive_Road.reverse()
+	print(Drive_Road)
+except :
+	print("NO")
