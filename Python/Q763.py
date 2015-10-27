@@ -14,15 +14,19 @@ def Translate_Fib(num):
 	i=0
 	while fin[i]<=num:
 		i+=1
-	for j in xrange(i-1,-1,-1):
+	for j in xrange(i-1,0,-1):
 		if fin[j]<=num:
 			num-=fin[j]
 			Fib_S+='1'
 		else:
 			Fib_S+='0'
+	if num:
+		Fib_S+='1'
+	else:
+		Fib_S+='0'
 	return Fib_S
 
-a='10000'[::-1]
-b='1000'[::-1]
+a='10010'[::-1]
+b='1'[::-1]
 
 print(Translate_Fib( Translate_Base10(a)+Translate_Base10(b)))
